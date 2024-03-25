@@ -1,0 +1,196 @@
+
+
+.center {
+
+    width: 100%;
+    max-width: 400px;
+    background: rgba(232, 225, 225, 0.9);
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    margin: 50px auto;
+}
+
+.center h1 {
+    text-align: center;
+    font-size: 30px;
+    color: #610909;
+    padding: 20px 0;
+    border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+.center form {
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+.txt_field {
+    position: relative;
+    margin: 30px 0;
+}
+
+.txt_field input {
+    width: calc(100% - 25px);
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.txt_field label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #0b0b0b;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.txt_field span::before {
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: #610909;
+    transition: 0.5s;
+}
+
+.txt_field input:focus ~ label,
+.txt_field input:valid ~ label {
+    top: -5px;
+    color: #000305;
+}
+
+.txt_field input:focus ~ span::before,
+.txt_field input:valid ~ span::before {
+    width: 100%;
+}
+
+input[type='submit'] {
+    width:40%;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #610909;
+    color: #e9f4fb;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 25px;
+    border: 1px solid #610909;
+    cursor: pointer;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+input[type='submit']:hover {
+    background: #fff;
+    color: #610909;
+    transition: 0.5s;
+}
+/* Style the select container */
+.txt_field select {
+    width: calc(100% - 25px);
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    background: none;
+    outline: none;
+    border: 1px solid #610909;
+    border-radius: 5px;
+    color: #0b0b0b;
+}
+
+/* Style the label for the select */
+.txt_field select + label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: #0b0b0b;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+/* Style the options within the dropdown */
+.txt_field select option {
+    background-color: #e9f4fb;
+    color: #610909;
+}
+
+/* Style the select when it's focused or has a selected value */
+.txt_field select:focus + label,
+.txt_field select:valid + label {
+    top: -5px;
+    color: #000305;
+}
+
+.button {
+    width:40%;
+    display: inline; /* Change to inline */
+    padding: 10px 20px;
+    margin-left: 10%;
+    margin-top: 20px;
+    background-color: #610909;
+    color: #e9f4fb;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 25px;
+    border: 1px solid #610909;
+    cursor: pointer;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.button:hover {
+    background-color: #fff;
+    color: #610909;
+}
+.img
+{
+    border-radius: 20Px;
+     width: 50%;
+    height:50%;
+}
+/* Style the file input container */
+/* Style the file input container */
+.txt_field input[type="file"] {
+    display: none; /* Hide the default file input */
+}
+
+/* Style the custom file input wrapper */
+.txt_field .custom-file-input {
+    position: relative;
+    width: calc(100% - 25px);
+    padding: 10px;
+    background-color: #f8f9fa; /* Example background color */
+    border: 1px solid #ced4da; /* Example border color */
+    border-radius: 5px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+/* Style the label for the custom file input */
+.txt_field .custom-file-input-label {
+    color: #495057; /* Example text color */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+}
+
+/* Style the file input when it's focused or has a selected file */
+.txt_field input[type="file"]:focus + .custom-file-input,
+.txt_field input[type="file"]:valid + .custom-file-input {
+    border-color: #007bff; /* Example focus or valid border color */
+}
+
+/* Style the file input label when it's focused or has a selected file */
+.txt_field input[type="file"]:focus + .custom-file-input .custom-file-input-label,
+.txt_field input[type="file"]:valid + .custom-file-input .custom-file-input-label {
+    color: #007bff; /* Example focus or valid text color */
+}
